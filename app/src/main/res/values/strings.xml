@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Quick Notes</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="web_client_id">652444794973-47r2l0lr4bsfum9gpsc2ljc3fogps0p5.apps.googleusercontent.com</string>
+    <string name="note_title">Note Title</string>
+    <string name="option_dots">⋮</string>
+</resources>

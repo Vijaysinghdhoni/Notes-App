@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.vijaydhoni.quicknotes.authentication.LoginFragment"
+        android:label="fragment_login_"
+        tools:layout="@layout/fragment_login_" >
+        <action
+            android:id="@+id/action_loginFragment_to_notesFragment"
+            app:destination="@id/notesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notesFragment"
+        android:name="com.vijaydhoni.quicknotes.notes.NotesFragment"
+        android:label="fragment_notes"
+        app:popUpTo="@id/loginFragment"
+        app:popUpToInclusive="true"
+        tools:layout="@layout/fragment_notes" >
+        <action
+            android:id="@+id/action_notesFragment_to_notesDetailFragment"
+            app:destination="@id/notesDetailFragment" />
+        <action
+            android:id="@+id/action_notesFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notesDetailFragment"
+        android:name="com.vijaydhoni.quicknotes.notes.NotesDetailFragment"
+        android:label="fragment_notes_detail"
+        tools:layout="@layout/fragment_notes_detail" >
+        <argument
+            android:name="note"
+            app:argType="com.vijaydhoni.quicknotes.data.Note"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+
+</navigation>
